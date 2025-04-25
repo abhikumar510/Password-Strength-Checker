@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo"><i>PASSWORD STRENGTH CHECKER</i></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#check">Check</a></li>
+                <li><a href="#generate">Generate</a></li>
+                <li><a href="#why">Why?</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Secure Your Digital Life</h1>
+                <p><h2>"Weak passwords are a hacker’s best friend.
+                    Find out if yours is putting your data at risk—check its strength in seconds!"
+                    "Is your password strong enough to withstand a cyberattack?
+                    In just seconds, our free Password Strength Checker evaluates your password’s resilience against hackers,
+                    helping you stay one step ahead of digital threats."
+                    </h2></p>
+                <p><h2><b>Check your password strength or generate a strong, secure password with our free tools.</b></h2></p>
+            </div>
+        </section>
+
+        <section id="check" class="section">
+            <div class="container">
+                <h2>Password Strength Checker</h2>
+                <div class="password-checker">
+                    <div class="input-group">
+                        <input type="password" id="password-input" placeholder="Enter your password">
+                        <button id="toggle-visibility"><i class="fas fa-eye"></i></button>
+                    </div>
+                    <div class="strength-meter">
+                        <div class="strength-bar"></div>
+                    </div>
+                    <div class="strength-text">Password Strength: <span id="strength-result">None</span></div>
+                    <div class="feedback" id="password-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="generate" class="section">
+            <div class="container">
+                <h2>Password Generator</h2>
+                <div class="password-generator">
+                    <div class="options">
+                        <div class="option">
+                            <label for="length">Length (8-32):</label>
+                            <input type="range" id="length" min="8" max="32" value="12">
+                            <span id="length-value">12</span>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="uppercase" checked>
+                            <label for="uppercase">Uppercase Letters (A-Z)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Lowercase Letters (a-z)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="numbers" checked>
+                            <label for="numbers">Numbers (0-9)</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="symbols" checked>
+                            <label for="symbols">Symbols (!@#$%^&*)</label>
+                        </div>
+                    </div>
+                    <button id="generate-btn" class="btn">Generate Password</button>
+                    <div class="result">
+                        <input type="text" id="generated-password" readonly>
+                        <button id="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why" class="section">
+            <div class="container">
+                <h2>Why Strong Passwords Matter</h2>
+                <div class="why-content">
+                    <div class="card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security</h3>
+                        <p>Strong passwords protect your personal information from hackers and unauthorized access.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>Privacy</h3>
+                        <p>Weak passwords can compromise your privacy and lead to identity theft.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Prevention</h3>
+                        <p>Over 80% of data breaches are caused by weak or stolen passwords.</p>
+                    </div>
+                </div>
+                <div class="stats">
+                    <h3>Password Statistics</h3>
+                    <ul>
+                        <li><strong>123456</strong> and <strong>password</strong> are still the most common passwords</li>
+                        <li>It takes less than a second to crack a weak password</li>
+                        <li>59% of people use the same password everywhere</li>
+                        <li>Adding symbols and numbers can increase security by 10,000x</li>
+                    </ul>
+                    <h3>The Impact of Stolen Passwords</h3>
+                    <p>Compromised passwords caused 80 percent of all data breaches in 2019, resulting in financial 
+                        losses for both businesses and consumers.</p>
+                    <br>
+                    <h3>Impact on Businesses</h3>
+                    <ul>
+                        <li>Internationally, the average cost of a data breach in 2020 for businesses was $3.86 million, according to IBM. However, for the U.S, the average cost was the highest worldwide at $8.64 million.</li>
+                        <li>In the manufacturing industry specifically, malware that stole credentials and dumped passwords created 922 cybersecurity incidents in 2020. 73 percent of these incidents were motivated by financial incentives, while with 27 percent of these incidents, the motive was espionage.</li>
+                        <li>If companies have a data breach caused by stolen credentials, they can lose up to three percent of their overall market value long-term. For the retail industry, this loss triples to nine percent within only 30 days of the breach announcement. According to researchers from the University of North Carolina’s Kenan Flagler Business School, this increase is due to the fact that retail customers are less brand loyal than consumers in other industries.</li>
+                    </ul>
+                    <h3>Ways To Protect Yourself Online</h3>
+                    <p>Aside from creating secure and unique passwords for all web accounts, there are other best practices to increase one’s digital security.</p>
+                    <ul>
+                        <li><b>Use a VPN:</b> While passwords keep unauthorized users out of accounts, Internet Service Providers can still track a user’s online activity as well as their devices’ private IP addresses. The only way to hide web activity and IP addresses is to connect not directly to a public Wi-Fi network, but instead to a VPN, which stands for Virtual Private Network. Learn more about some of the best VPNs such as NordVPN, all tested by our digital security experts</li>
+                        <li><b>Get identity theft protection:</b> While a strong password can go a long way in protecting online accounts, there’s no single action that can protect a user’s personally identifiable information from identity theft. Rather, top identity theft protection software monitors key criminal and financial areas for users’ personal information.</li>
+                        <li><b>Use antivirus software:</b> The best antivirus software can scan computers, phones, and tablets for malware, ransomware, viruses, spyware, and other cyber threats.</li>
+                        <li><b>Use a password manager: </b>The best password managers store users’ usernames and passwords in encrypted vaults, requiring only master passwords or biometrics to log into accounts. Memorizing dozens of secure passwords is tedious, so we strongly recommend using a reliable password manager to store all your passwords.</li>
+                        <li><b>Only change passwords when needed: </b>While digital security experts used to recommend changing passwords in regular intervals, it’s a myth that doing so keeps your accounts more secure. The prevailing train of thought now among experts like ourselves is that if you change your password often, there’s a greater chance you’ll use weaker passwords that are easier to remember or succumb to a pattern that will make your passwords more predictable. Rather, it’s only necessary to change passwords if the account itself is compromised.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Password Strength Checker website was created by Vijay, Anurag Kumar, Harish, Umesh, Bhavisye and Abhishek Dass with the mission to improve online security awareness and help people create stronger passwords.</p>
+                        <p>Our team consists of cybersecurity enthusiasts and web developers who are passionate about digital privacy and security.</p>
+                        <p>All our tools are free to use and we don't store any of your passwords - everything happens in your browser.</p>
+                    </div>
+                    <div class="team">
+                        <h3>Our Team</h3>
+                        <div class="team-members">
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><i>VIJAY</i></h4>
+                                <P>230070800063</P>
+                            </div>
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><i>ANURAG KUMAR</i></h4>
+                                <P>230070800008</P>
+                            </div>
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><I>HARISH</I></h4>
+                                <p>230070824006</p>
+                            </div>
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><I>UMESH</I></h4>
+                                <p>230070800057</p>
+                            </div>
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><I>BHAVISHYA</I></h4>
+                                <p>230070800013</p>
+                            </div>
+                            <div class="member">
+                                <div class="avatar"><i class="fas fa-user"></i></div>
+                                <h4><B>ABHISHEK DASS</B></h4>
+                                <p>230070800002</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PASSWORD STRENGTH CHECKER. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
